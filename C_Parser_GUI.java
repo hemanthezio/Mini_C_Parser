@@ -14,12 +14,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import javax.print.DocFlavor.URL;
 import javax.swing.*;
-
-
-
 
 public class C_Parser extends JFrame implements ActionListener{
 	JTextArea a1,a2;
@@ -40,12 +36,6 @@ public class C_Parser extends JFrame implements ActionListener{
 		//this.setVisible(true);
 		a1 =new JTextArea(5, 20);
 		a1.setBounds(10, 50, 500, 600);
-		
-		//JTextPane textPane = new JTextPane();
-		//JScrollPane scrollPane = new JScrollPane(textPane);
-		
-		
-		
 		
 		JScrollPane scrollPane1 = new JScrollPane(a1);
 		TextLineNumber tln = new TextLineNumber(a1);
@@ -107,21 +97,14 @@ public class C_Parser extends JFrame implements ActionListener{
 		title.setForeground(Color.WHITE);
 		title.setFont(new Font ("TimesRoman", Font.BOLD | Font.ITALIC, 25));
 		title.setBounds(450, 0, 300, 50);
-		
-		
-		//this.add(a1);
-		//this.add(a2);
+
 		bg.add(scrollPane1);
 		bg.add(scrollPane2);
 		bg.add(parse);
 		bg.add(ip);
 		bg.add(op);
 		bg.add(title);
-		bg.add(load);
-		
-		
-		
-		
+		bg.add(load);	
 	}
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==parse) {
@@ -159,9 +142,6 @@ public class C_Parser extends JFrame implements ActionListener{
                 reader.close();
             }catch (IOException x) {}
 		}
-		
-		
-		
 	}
 	public void centreWindow(Window frame) {
 	    Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -193,8 +173,6 @@ public class C_Parser extends JFrame implements ActionListener{
 
 		return output.toString();
 
-	
-
 	}
 	
 	public static void main(String args[]){
@@ -202,8 +180,5 @@ public class C_Parser extends JFrame implements ActionListener{
         window.centreWindow(window);
         window.setVisible(true);
         window.getContentPane().setBackground(Color.yellow);
-        
-       
 	}
-
 }
